@@ -6,7 +6,6 @@
 #include "components.h"
 
 auto collect_crystals(std::shared_ptr<xc::scene>& scene, xc::entity_id player) -> void {
-    // collision component keeps getting added every frame and the collider entity isn't getting removed
     if (scene->has_component<collision_component>(player)) {
         // Get the other entity
         auto collider_entity = scene->get_component<collision_component>(player).collider;
